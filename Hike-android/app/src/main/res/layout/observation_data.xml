@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="2dp"
+    app:cardBackgroundColor="@color/white"
+>
+    
+    <RelativeLayout
+        android:id="@+id/list_observation_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/observation_input_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/image_vector"
+            android:layout_centerVertical="true"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/observation_input_image"
+            android:layout_toLeftOf="@id/hike_item_more_btn"
+        >
+            <TextView
+                android:id="@+id/observation_name"
+                android:text="Observation"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            />
+            <TextView
+                android:id="@+id/observation_time"
+                android:text="xx-xx-xxxx"
+                android:textSize="16sp"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/observation_comment"
+                android:text="Comments"
+                android:textSize="16sp"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/hike_item_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_vector"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+        />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

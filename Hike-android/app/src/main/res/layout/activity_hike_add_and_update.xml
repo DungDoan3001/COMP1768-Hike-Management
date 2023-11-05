@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hike_add_and_update">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/hike_input_image"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="130dp"
+                android:src="@drawable/image_vector" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hike_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hike_image"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:hint="Hike name"
+                android:inputType="text"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/pen_vector">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hike_input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hike_location_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hike_image"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:hint="Location"
+                android:inputType="text"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/location_vector">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hike_input_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="50" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/hike_date_length_layout"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/hike_location_layout"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:inputType="datetime"
+                    app:endIconMode="clear_text"
+                    android:hint="Date"
+                    app:startIconDrawable="@drawable/calendar_vector">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hike_input_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:inputType="numberDecimal"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/hiking_vector"
+                    android:hint="Length in Km">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hike_input_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_below="@id/hike_date_length_layout"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textLongMessage"
+                android:hint="Description"
+                android:textAlignment="center"
+                app:startIconDrawable="@drawable/description_vector"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hike_input_description"
+                    android:gravity="start|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/hike_level_group"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hike_level_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:text="Hike Level"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+                    
+                    <RadioGroup
+                        android:id="@+id/hike_level_radio_group"
+                        android:layout_below="@id/hike_level_text_view"
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        
+                        <RadioButton
+                            android:id="@+id/hike_level_easy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Easy"
+                            android:tag="Easy"/>
+
+                        <RadioButton
+                            android:id="@+id/hike_level_intermediate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Intermediate"
+                            android:tag="Intermediate"/>
+
+                        <RadioButton
+                            android:id="@+id/hike_level_hard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hard"
+                            android:tag="Hard"/>
+                        
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hike_parking_group"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hike_parking_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:text="Is parking available?"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <RadioGroup
+                        android:id="@+id/hike_parking_radio_group"
+                        android:layout_below="@id/hike_level_text_view"
+                        android:layout_marginStart="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/hike_parking_yes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:tag="Yes"/>
+
+                        <RadioButton
+                            android:id="@+id/hike_parking_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:tag="No"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/hike_confirm_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Agree with our tearms and condition."/>
+            
+            <Button
+                android:id="@+id/add_input_hike_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/primaryGreen"
+                android:text="Add Hike"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
