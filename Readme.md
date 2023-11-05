@@ -18,6 +18,6 @@ To install M-Hike, you need to have Android Studio and Xamarin/MAUI installed on
 You also need to clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/M-Hike.git
+git clone https://github.com/DungDoan3001/COMP1768-Hike-Management.git
 ```
 Then, you can open the project in Android Studio or Xamarin/MAUI and run it on an emulator or a real device.
