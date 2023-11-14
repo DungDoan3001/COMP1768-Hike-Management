@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:view="clr-namespace:Hikemaui.Views"
+            xmlns:root="clr-namespace:Hikemaui"
+            Title="Menu"
+             x:Class="Hikemaui.MainPage">
+
+    <FlyoutPage.Flyout>
+        <root:FlyoutMenuPage x:Name="flyout"/>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <view:HomePage/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

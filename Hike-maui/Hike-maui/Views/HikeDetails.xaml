@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hikemaui.Views.HikeDetails"
+             Title="Hike details">
+    <StackLayout Margin="10">
+        <StackLayout Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Name: " FontSize="18" FontAttributes="Bold" Grid.Row="0"/>
+                <Label Text="{Binding Name}" Grid.Row="1" FontSize="18"/>
+
+                <Label Text="Date: " FontSize="18" FontAttributes="Bold" Grid.Row="2"/>
+                <Label Text="{Binding Date}" Grid.Row="3" FontSize="18"/>
+
+                <Label Text="Location: " FontSize="18" FontAttributes="Bold" Grid.Row="4"/>
+                <Label Text="{Binding Location}" Grid.Row="5" FontSize="18"/>
+
+                <Label Text="Length: " FontSize="18" FontAttributes="Bold" Grid.Row="6"/>
+                <Label Text="{Binding Length}" Grid.Row="7" FontSize="18"/>
+
+                <Label Text="Level: " FontSize="18" FontAttributes="Bold" Grid.Row="8"/>
+                <Label Text="{Binding Level}" Grid.Row="9" FontSize="18"/>
+
+                <Label Text="Parking: " FontSize="18" FontAttributes="Bold" Grid.Row="10"/>
+                <Label Text="{Binding Parking}" Grid.Row="11" FontSize="18"/>
+            </Grid>
+        </StackLayout>
+        <StackLayout Grid.Row="12">
+            <Button Text="Add a observation" Clicked="Button_Clicked" Grid.Row="12"/>
+            <CollectionView x:Name="ObservationCollectionView" SelectionMode="Single" SelectionChanged="ObservationCollectionView_SelectionChanged" Margin="20,5,20,0" Grid.Row="13">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItem Text="Delete" BackgroundColor="Red" CommandParameter="{Binding .}" Invoked="SwipeItemObservation_InvokeAsync_Delete"/>
+                                <SwipeItem Text="Edit" BackgroundColor="AliceBlue" CommandParameter="{Binding .}" Invoked="SwipeItemObservation_InvokeAsync_Edit"/>
+                            </SwipeView.RightItems>
+                            <Grid RowSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Id}" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold"/>
+                                <Label Text="{Binding Time}" Grid.Row="1" Grid.Column="1"/>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
