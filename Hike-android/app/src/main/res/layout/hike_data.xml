@@ -20,7 +20,7 @@
             android:layout_height="100dp"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
-            android:src="@drawable/image_vector"/>
+            android:src="@drawable/image_vector" />
 
         <LinearLayout
             android:layout_centerVertical="true"

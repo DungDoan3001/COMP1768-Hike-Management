@@ -17,10 +17,10 @@
             <Label Text="Name: " FontSize="18" FontAttributes="Bold" Grid.Row="0"/>
             <Label Text="{Binding Name}" Grid.Row="1" FontSize="18"/>
 
-            <Label Text="Name: " FontSize="18" FontAttributes="Bold" Grid.Row="2"/>
+            <Label Text="Time: " FontSize="18" FontAttributes="Bold" Grid.Row="2"/>
             <Label Text="{Binding Time}" Grid.Row="3" FontSize="18"/>
 
-            <Label Text="Name: " FontSize="18" FontAttributes="Bold" Grid.Row="4"/>
+            <Label Text="Comments: " FontSize="18" FontAttributes="Bold" Grid.Row="4"/>
             <Label Text="{Binding Comment}" Grid.Row="5" FontSize="18"/>
         </Grid>
     </StackLayout>

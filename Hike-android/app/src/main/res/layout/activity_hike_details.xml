@@ -73,7 +73,7 @@
                     android:textStyle="bold"
                     android:textSize="17dp"
                     android:textColor="@color/black"
-                    />
+                />
                 <TextView
                     android:id="@+id/hike_date"
                     android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                     android:textStyle="bold"
                     android:textSize="17dp"
                     android:textColor="@color/black"
-                    />
+                />
                 <TextView
                     android:id="@+id/hike_length"
                     android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                     android:textStyle="bold"
                     android:textSize="17dp"
                     android:textColor="@color/black"
-                    />
+                />
                 <TextView
                     android:id="@+id/hike_created_date"
                     android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                     android:textSize="16dp"
                     android:layout_weight="1"
                     android:textColor="@color/black"
-                    />
+                />
             </TableRow>
             <TableRow>
                 <TextView
@@ -136,7 +136,7 @@
                     android:textStyle="bold"
                     android:textSize="17dp"
                     android:textColor="@color/black"
-                    />
+                />
                 <TextView
                     android:id="@+id/hike_updated_at"
                     android:layout_width="match_parent"
@@ -146,7 +146,7 @@
                     android:textSize="16dp"
                     android:layout_weight="1"
                     android:textColor="@color/black"
-                    />
+                />
             </TableRow>
             <TableRow>
                 <LinearLayout
@@ -183,7 +183,7 @@
                     android:layout_weight="2"
                     android:gravity="end"
                     android:orientation="horizontal"
-                    >
+                >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -192,7 +192,7 @@
                         android:textStyle="bold"
                         android:textSize="17dp"
                         android:textColor="@color/black"
-                        />
+                    />
 
                     <TextView
                         android:id="@+id/hike_level"
@@ -203,7 +203,7 @@
                         android:textSize="16dp"
                         android:layout_weight="1"
                         android:textColor="@color/black"
-                        />
+                    />
                 </LinearLayout>
             </TableRow>
             <TableRow>
@@ -239,30 +239,30 @@
             </TableRow>
         </TableLayout>
 
-    <Button
-        android:id="@+id/add_observation_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_margin="15dp"
-        android:text="Add an observation"
-        android:backgroundTint="@color/primaryGreen"
-    />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-    >
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/hike_observation_recycler_view"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:clipToPadding="false"
-            tools:listitem="@layout/observation_data"
+        <Button
+            android:id="@+id/add_observation_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="15dp"
+            android:text="Add an observation"
+            android:backgroundTint="@color/primaryGreen"
         />
-    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+        >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hike_observation_recycler_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:clipToPadding="false"
+                tools:listitem="@layout/observation_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </LinearLayout>
 
     </LinearLayout>
 

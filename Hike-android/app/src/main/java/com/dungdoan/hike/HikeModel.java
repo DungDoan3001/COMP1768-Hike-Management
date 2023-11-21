@@ -14,16 +14,16 @@ public class HikeModel {
     private String Updated_At;
 
     public HikeModel(String ID,
-                     String name,
-                     String location,
-                     String date,
-                     String length,
-                     String parking,
-                     String level,
-                     String description,
-                     String image,
-                     String created_At,
-                     String updated_At) {
+            String name,
+            String location,
+            String date,
+            String length,
+            String parking,
+            String level,
+            String description,
+            String image,
+            String created_At,
+            String updated_At) {
         this.ID = ID;
         this.Name = name;
         this.Location = location;
